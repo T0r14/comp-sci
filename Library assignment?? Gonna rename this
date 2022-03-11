@@ -1,0 +1,34 @@
+book_menu = True
+while book_menu:
+  print("\n")
+  print("1. New Book")
+  print("2. Last Book")
+  print("3. Exit")
+  choice = int(input("\nWhat do you wanna do?: "))
+  
+  if choice == 1:
+    book_list = []
+    bookname = input("\nWhat's the title of your book?: ")
+    pagenum = int(input("\nHow many pages are in your book?: "))
+    pageread = int(input("\nHow many pages have you read so far?: "))
+    percentage = pageread/pagenum*100
+
+
+
+
+    stuff = {'title': bookname, 'percentbook' : percentage}
+    
+    print(f"\n{stuff['title']} is {stuff['percentbook']} % complete")
+  
+    bookstats_ = (f"\n{stuff['title']} is {stuff['percentbook']} % complete")
+
+    book_list.append(bookstats_)
+
+  elif choice == 2:
+    print(book_list[-1])
+
+  elif choice == 3:
+    break
+
+  else:
+    print("\nwhat do you mean?")
